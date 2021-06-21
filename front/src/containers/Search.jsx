@@ -5,9 +5,7 @@ import { getMoviesRequest } from "../state/movies";
 import {RiSearchLine} from 'react-icons/ri'
 import { FormControl } from "react-bootstrap";
 
-
 const Search = () => {
-
     const [input, setInput] = useState('')
     const dispatch = useDispatch()
 
@@ -23,7 +21,7 @@ const Search = () => {
         <Link to="/search">
         <FormControl 
         type='text'
-        placeholder='Buscar películas, solo teens redheads'            
+        placeholder='Buscar películas'            
         value={input}
         onChange={handleChange}
         className="mr-sm-2"

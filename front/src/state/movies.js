@@ -1,6 +1,7 @@
 import {createAsyncThunk, createReducer} from '@reduxjs/toolkit';
 import axios from 'axios';
 
+//cada vez q querramos generar un pedido de datos
 // action de peliculas
 
 export const getMoviesRequest = createAsyncThunk('MOVIES', (input) => { //input es superman ṕor ej getMovies

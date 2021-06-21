@@ -21,3 +21,33 @@
 - Ver el perfil de un usuario con sus películas favoritas.
 
 Para más información busquen en [Pledu](https://pledu.plataforma5.la/modules/e2b1ace6-8de6-4b10-a025-647583402a8a)
+
+
+// BACK 
+
+1)CREAR LAS RUTAS
+2)modelo USUARIO    y de modelo FAVORITOS.
+3)modelo Favoritos
+4)Controllers
+5)passport config terminarla.
+6)conectar la db
+
+modelo favoritos: 
+
+userFrom: 
+    {
+        type: String,
+        ref: "User"
+    },
+    movieId:{
+        type: String
+    },
+    movieTitle:{
+        type: String
+    },
+    movieImage:{
+        type: String
+    }
+
+userName:
+    
