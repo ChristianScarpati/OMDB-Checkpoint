@@ -13,7 +13,10 @@ import Search from "./containers/Search";
 import LoginView from "./components/LoginView";
 import RegisterView from "./components/RegisterView";
 import Favourites from "./containers/Favorites";
+import GetUsers from "./components/GetUsers";
 
+
+            //RUTAS DEL FRONT, RUTAS DE RENDERIZACION DE COMPOENTNE
 
 function App() {
 
@@ -26,7 +29,7 @@ function App() {
 
 
         <Route exact path='/movie/:id' component={MovieView}/>
-      
+        <Route exact path='/users' component={GetUsers}/>
         <Route exact path='/search' component={GetMovies} />
         <Route exact path='/login' component={LoginView}/>
         <Route exact path='/register' component={RegisterView}/>

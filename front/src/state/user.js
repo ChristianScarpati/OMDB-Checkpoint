@@ -1,6 +1,7 @@
 import { createAsyncThunk, createReducer } from "@reduxjs/toolkit";
 import axios from 'axios'
 
+    // ESTAS SON RUTAS DEL BACKEND DE MI API
 
 
 //ACTION redux CREAMOS USUARIOS

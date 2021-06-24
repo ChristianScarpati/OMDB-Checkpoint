@@ -1,4 +1,4 @@
-import { DelFav, AddFav, GetFav } from "../state/favourites";
+import { delFav, addFav, getFav } from "../state/favourites";
 import React, {useState, useEffect} from "react";
 import {useSelector, useDispatch} from 'react-redux'
 import axios from "axios"
@@ -28,15 +28,15 @@ const Favourites = () => {
     }
 
     const addClick = () => {
-        dispatch(AddFav(movie))
+        dispatch(addFav(movie))
     }
 
     const removeClick = () => {
-        dispatch(DelFav(movie))
+        dispatch(delFav(movie))
     }
 
     const GetUser = () => {
-        dispatch(GetFav())
+        dispatch(getFav())
     }
         
 console.log(loggUse.username, "probando user")
@@ -53,7 +53,7 @@ console.log(loggUse.username, "probando user")
             <button onClick={GetUser}> Submit  </button>
 
             <div>
-                {loggUse.username && favorites.length>0 ? favorites.filter(c => c.userFrom==loggUse.username).map((c) => 
+                {loggUse.username && favorites.length>0 ? favorites.filter(c => c.userFrom===loggUse.username).map((c) => 
 
                     (<div key={c.movieId} >
                         <Link

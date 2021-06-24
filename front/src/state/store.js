@@ -5,7 +5,7 @@ import { logger } from "redux-logger";
 import moviesReducer from "./movies";
 import movieReducer from "./movie";
 import userReducer from "./user";
-import ReducerFav from "./favourites";
+import reducerFav from "./favourites";
 
 
 const store = configureStore({
@@ -16,12 +16,13 @@ const store = configureStore({
     movies: moviesReducer, //accedemos al objeto movies
     movie: movieReducer,
     user: userReducer,
-    favourites: ReducerFav,
+    favourites: reducerFav,
     
   },
 });
 
 export default store;
+
 
 
 

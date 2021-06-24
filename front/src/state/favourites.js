@@ -4,7 +4,7 @@ import axios from "axios";
 
         // GET FAV
 
-export const GetFav = createAsyncThunk("GET_FAV", (movie) => {
+export const getFav = createAsyncThunk("GET_FAV", (movie) => {
 
     axios({
         method: "GET",
@@ -17,7 +17,7 @@ export const GetFav = createAsyncThunk("GET_FAV", (movie) => {
 
     //ADD FAV
 
-export const AddFav = createAsyncThunk("FAVORITE_ADD", (movie) => {
+export const addFav = createAsyncThunk("FAVORITE_ADD", (movie) => {
 
     return axios({
         method: "POST",
@@ -30,7 +30,7 @@ export const AddFav = createAsyncThunk("FAVORITE_ADD", (movie) => {
 
     //DELETE FAV
 
-export const DelFav = createAsyncThunk("DELETE_ADD", (movie) => {
+export const delFav = createAsyncThunk("DELETE_ADD", (movie) => {
 
     return axios({
         method: "DELETE",
@@ -41,11 +41,11 @@ export const DelFav = createAsyncThunk("DELETE_ADD", (movie) => {
     .then((res) => alert(res, "Pelicula eliminada"))
 })
 
-const ReducerFav = createReducer([], {
+const reducerFav = createReducer([], {
 
-    [DelFav.fulfilled]: (state, action) => action.payload,
-    [AddFav.fulfilled]: (state, action) => action.payload,
-    [GetFav.fulfilled]: (state, action) => action.payload,
+    [delFav.fulfilled]: (state, action) => [state, action.payload],
+    [addFav.fulfilled]: (state, action) => [state, action.payload],
+    [getFav.fulfilled]: (state, action) => [state, action.payload],
 })
 
-export default ReducerFav
+export default reducerFav
