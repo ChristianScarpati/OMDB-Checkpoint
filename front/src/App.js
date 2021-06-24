@@ -27,7 +27,6 @@ function App() {
       <div>
         <Navbar2 />
 
-
         <Route exact path='/movie/:id' component={MovieView}/>
         <Route exact path='/users' component={GetUsers}/>
         <Route exact path='/search' component={GetMovies} />

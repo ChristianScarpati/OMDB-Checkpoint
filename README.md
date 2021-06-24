@@ -31,22 +31,5 @@ Para más información busquen en [Pledu](https://pledu.plataforma5.la/modules/e
 5)passport config terminarla.
 6)conectar la db
 
-modelo favoritos: 
 
-userFrom: 
-    {
-        type: String,
-        ref: "User"
-    },
-    movieId:{
-        type: String
-    },
-    movieTitle:{
-        type: String
-    },
-    movieImage:{
-        type: String
-    }
-
-userName:
     

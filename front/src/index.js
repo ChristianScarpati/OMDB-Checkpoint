@@ -17,7 +17,6 @@ ReactDOM.render(
     <Provider store={store}> 
     <Route path='/' component={App} />    {/* cuando ingrese a / me va a renderizar el compoennte app */}
     
-
     </Provider>
     </BrowserRouter>,
 

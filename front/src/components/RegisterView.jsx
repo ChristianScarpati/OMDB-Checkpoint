@@ -69,7 +69,9 @@ const handleClick = () => {
           placeholder="Password" />
          </Form.Group>
 
-        <Button variant="primary"
+        <Button 
+        variant="primary" 
+        className={style.button}
          onClick={handleClick}  >  
           Register
           

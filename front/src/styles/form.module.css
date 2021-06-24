@@ -5,15 +5,16 @@
 }
 
 .form {
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 40px;
+   
   }
   
   .form input {
@@ -23,8 +24,16 @@
   }
   
   .form button {
-    padding: 0.5em 1em;
+    display: block;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
     border: none;
-    background: rgb(100, 200, 255);
+    background: rgb(4, 209, 255);
     cursor: pointer;
+    margin: 0;
+    width: 60%;
+    justify-content: center;
   }

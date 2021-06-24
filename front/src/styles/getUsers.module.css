@@ -1,0 +1,20 @@
+.color  {
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    width: 50%;
+    height: 50%;
+    border: 1px solid white;
+    color: white;
+}
+
+.tabla  {
+    
+    display: flex;
+   /*  margin-right: auto; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
