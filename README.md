@@ -27,7 +27,6 @@ Para más información busquen en [Pledu](https://pledu.plataforma5.la/modules/e
 
 1)CREAR LAS RUTAS
 2)modelo USUARIO    y de modelo FAVORITOS.
-3)modelo Favoritos
 4)Controllers
 5)passport config terminarla.
 6)conectar la db

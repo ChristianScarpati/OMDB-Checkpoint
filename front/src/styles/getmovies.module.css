@@ -1,0 +1,37 @@
+.centerMovies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cardSize    {
+
+    height: auto;
+
+}
+
+
+/* 
+.peliculas  {
+    border: 3px solid white;
+    padding: 30px;
+    font-size: 0.15rem;
+    max-width: 100%;
+    line-height: 75px;
+    padding: 10px;
+}
+
+.button{
+
+    background-color: green;
+} */
+
+/* width="250" height="230" */
+
+
+/* justify-content: center;
+align-items: center;
+text-align: center; */

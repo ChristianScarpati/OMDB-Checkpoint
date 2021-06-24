@@ -10,24 +10,31 @@ import MovieView from "./components/MovieView";
 import {Route} from 'react-router-dom'
 import moviesReducer from "./state/movies";
 import Search from "./containers/Search";
-
+import LoginView from "./components/LoginView";
+import RegisterView from "./components/RegisterView";
+import Favourites from "./containers/Favorites";
 
 
 function App() {
+
+//me
+  
   return (
     
-    <div>
-        
+      <div>
         <Navbar2 />
-        <Route exact path='/movie/:id' component={MovieView}/>
-        <GetMovies />
-        <Route exact path='/' component={Carrousel2}/>
-        <Route exact path='/search' component={GetMovies}/>
-        <Footer2 />
 
+
+        <Route exact path='/movie/:id' component={MovieView}/>
+      
+        <Route exact path='/search' component={GetMovies} />
+        <Route exact path='/login' component={LoginView}/>
+        <Route exact path='/register' component={RegisterView}/>
+        <Route exact path='/' component={Carrousel2} />
+        
+        <Footer2 />
       </div>
       
-
   );
 }
 

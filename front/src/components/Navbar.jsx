@@ -1,44 +1,76 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import style from '../styles/navbar.module.css'
-import { FaImdb } from 'react-icons/fa';  
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Badge } from 'react-bootstrap';
-import Search from '../containers/Search'
-
+import style from "../styles/navbar.module.css";
+import { FaImdb } from "react-icons/fa";
+import {
+  Navbar,
+  //Nav,
+  //NavDropdown,
+  //Form,
+  //FormControl,
+  Button,
+  //Badge,
+} from "react-bootstrap";
+import Search from "../containers/Search";
+import LogOutButton from "../components/LogOut";
+import { sessionUser } from "../state/user";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import SessionUser from "./SessionUser";
 
 const Navbar2 = () => {
+  
+  const dispatch = useDispatch();
 
+  const Christian3p = useSelector((state) =>
+    state.user ? state?.user[1]?.name : null
+  );
+  
+  useEffect(() => {
+   
+    dispatch(sessionUser);
+  }, []);
 
   return (
 
-    <div >
-<Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home"><FaImdb className={style.icon}/></Navbar.Brand>
-  <Search />
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#link">Link</Nav.Link>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search"  />
-      <Button variant="outline-success">Search</Button>
-    </Form>
-  </Navbar.Collapse >
-  
-  <Button variant="warning">Sing In</Button>
-  <Button variant="warning">Login</Button>
 
-</Navbar>
-      </div>
+    <div>
+      
+      <Navbar className={style.background}
+      
+      >
+        <Link to="/">
+          <Navbar.Brand href="#home">
+            
+            <FaImdb className={style.icon} />
+          </Navbar.Brand>
+        </Link>
+        <Search />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+
+          <div> {Christian3p ? Christian3p : null}</div>
+
+        </Navbar.Collapse>
+
+        <Link to="/login">
+          <Button
+           className={style.button}
+           className={style.button}
+           >Login</Button>
+        </Link>
+
+        <Link to="/register">
+          <Button 
+          className={style.button} 
+          
+          
+          >Register</Button>
+        </Link>
+
+        {Christian3p ? <LogOutButton /> : null}
+      </Navbar>
+    </div>
   );
 };
 

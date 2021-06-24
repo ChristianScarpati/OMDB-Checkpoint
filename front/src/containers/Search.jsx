@@ -2,35 +2,36 @@ import React, { useState } from "react"; //use state retorna un valor de estado 
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getMoviesRequest } from "../state/movies";
-import {RiSearchLine} from 'react-icons/ri'
+import { RiSearchLine } from "react-icons/ri";
 import { FormControl } from "react-bootstrap";
+import style from '../styles/search.module.css'
+
 
 const Search = () => {
-    const [input, setInput] = useState('')
-    const dispatch = useDispatch()
+  const [input, setInput] = useState("");
+  const dispatch = useDispatch();
 
-    const handleChange = (e) => {
-        setInput(e.target.value)                            //el input es lo que va a escribir la persona
-        dispatch(getMoviesRequest(e.target.value))          //para que mande el input al backend y haga la búsqueda
-    }
-
-
+  const handleChange = (e) => {
+    setInput(e.target.value); //el input es lo que va a escribir la persona
+    dispatch(getMoviesRequest(e.target.value)); //para que mande el input al backend y haga la búsqueda
+  };
 
   return (
-    <div>
-        <Link to="/search">
-        <FormControl 
-        type='text'
-        placeholder='Buscar películas'            
-        value={input}
-        onChange={handleChange}
-        className="mr-sm-2"
-        />
-        <RiSearchLine />        
-      </Link>  
-     
-    </div>
 
+    <div   >
+      <Link to="/search">
+        <span className={style.lupita}>
+        <FormControl
+          type="text"
+          placeholder="Buscar películas"
+          value={input}
+          onChange={handleChange}
+          className="mr-sm-2"
+        />
+        <RiSearchLine className={style.lupaCenter}/>
+        </span>
+      </Link>
+    </div>
   );
 };
 
