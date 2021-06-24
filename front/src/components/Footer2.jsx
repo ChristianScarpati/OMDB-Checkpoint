@@ -12,7 +12,7 @@ const Footer2 = () => {
         <div className="container">
           <div className="row">
         
-            footer
+            
           </div>
         </div>
       </footer>
