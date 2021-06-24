@@ -5,17 +5,7 @@ import GetMovies from "./GetMovies";
 const Footer2 = () => {
   return (
     <div>
-      <footer 
-      className={style.footer}
-      className={style.body}
-      >
-        <div className="container">
-          <div className="row">
-        
-            
-          </div>
-        </div>
-      </footer>
+   
     </div>
   );
 };
