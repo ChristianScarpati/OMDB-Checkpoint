@@ -1,7 +1,6 @@
 import { delFav, addFav, getFav } from "../state/favourites";
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import {useSelector, useDispatch} from 'react-redux'
-import axios from "axios"
 import {Link} from 'react-router-dom'
 import { getSingleUser } from "../state/user";
 

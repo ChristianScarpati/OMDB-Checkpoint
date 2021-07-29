@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, dispatch } from "react-redux"; //selecionar estados de redux que estan volando
+import { useSelector } from "react-redux"; //selecionar estados de redux que estan volando
 import {
   Card,
   Button,
@@ -16,7 +16,7 @@ const MovieView = () => {
 
   const movie = useSelector((state) => state?.movie[1] ? state.movie[1] : null);
 
-
+                    
   return (
 
     <div  >    {/* style={{ width: "18rem", justifyContent: "center", displ }} */}

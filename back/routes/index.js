@@ -11,8 +11,6 @@ const Favourites = require('./favourites')
         //API
 
 router.use("/users", users)
-
-//ME TIRA ERRROR
 router.use('/favourites', Favourites)
 
 

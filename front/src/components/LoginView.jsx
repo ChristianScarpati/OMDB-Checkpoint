@@ -6,10 +6,9 @@ import { useDispatch } from "react-redux";
 import { loginUser } from "../state/user";
 import { useHistory } from 'react-router-dom'
 //import useLocalStorage from "../hooks/useLocalStorage";
-import style from '../styles/navbar.module.css'
+//import style from '../styles/navbar.module.css'
 import styles from '../styles/form.module.css'
-
-
+import styleButton from '../styles/registerButton.module.css'
 
 
 const LoginView = () => { 
@@ -29,11 +28,14 @@ const LoginView = () => {
     );
   };
 
-
+ const handleSubmit = (e) => {
+    alert('A name was submitted: ' );
+    e.preventDefault();
+  }
   
   return (
     <div className={styles.form}>
-      <Form >
+      <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail" > 
           <Form.Label color="white">Email address</Form.Label>
           <Form.Control
@@ -56,11 +58,11 @@ const LoginView = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button 
-        className={styles.button}
+        <button 
+        className={styleButton.glow_on_hover}
         onClick={handleClick}>
           login
-        </Button>
+        </button>
       </Form>
     </div>
   );

@@ -37,3 +37,9 @@
     width: 60%;
     justify-content: center;
   }
+
+.buttonRegister {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

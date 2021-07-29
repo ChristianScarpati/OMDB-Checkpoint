@@ -1,0 +1,44 @@
+config email. 
+
+config auth2
+botocn de acceso/login
+
+nodemailer: se registra con mails verdaderos para luiego demostrar en la demo.
+
+
+paginacion de productos: para que haga un pedido, solamente del 1 al 10.
+
+y abajo se le agrega la paginación
+
+admin finalidad: crear y eliminar categoria y producto.
+
+
+agregar al carrito sin que esté logueado
+
+
+Problemas:
+
+
+	
+	
+				OMDB
+				
+
+1) consola limpia
+
+2)Mejorar la modularización en la ruta de archivos App. EL INDEX SOLO RENDERICE EL APP
+
+3)el primer parametro que va a tomar, es el app limpio
+
+4) ojo con el login, etiqueta h1. Validar que no se permitan carácteres especiales. 
+ 
+ 
+Lado de Backend:
+
+La raiz de la carpeta api/ server.
+ 
+ 
+ 
+ 
+ 
+ 

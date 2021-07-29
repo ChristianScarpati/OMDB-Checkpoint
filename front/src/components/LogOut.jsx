@@ -1,10 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { logOutUser } from "../state/user";
 import { Button } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import style from '../styles/navbar.module.css'
+import styleButton from '../styles/registerButton.module.css'
 
 const LogOut = () => {
 
@@ -19,12 +19,12 @@ const LogOut = () => {
 
   return (
     <div>
-      <Button 
+      <button 
       onClick={handleClick}
        /* variant="danger" */
-       className={style.button} >
+       className={styleButton.glow_on_hover} >
         Logout
-      </Button>
+      </button>
     </div>
   );
 };

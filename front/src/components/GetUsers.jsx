@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, {useEffect } from "react";
 import { getUsers } from "../state/user";
 import { useDispatch, useSelector } from "react-redux";
-import { Table } from "react-bootstrap";
 import style from '../styles/getUsers.module.css'
 
 
 const GetUsers = () => {
   
-  const users = useSelector((state) => state.user[1]) //tabla bd
+  const users = useSelector((state) => state?.user[0]) //tabla bd
 
+  console.log(users, "users")
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getUsers());
-  }, []);
+  }, [dispatch]);
 
   console.log(users, "soy user")
   
   return (
 
-
   <div >
-    {users?users.map((p) => {
+    {users ? users.map((p) => {
 
     return (
 
@@ -48,18 +46,4 @@ const GetUsers = () => {
 
 export default GetUsers;
 
-  {/*   <Table striped bordered hover >
-  <thead>
-    <tr>
-      <th className={style.color}>Nombre</th>
-      <th className={style.color}>{p.name}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td className={style.color}> ID: {p.id}</td>
-      <td className={style.color}> E-mail: {p.email}</td>
   
-    </tr>
-  </tbody>
-</Table> */}

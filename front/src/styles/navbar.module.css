@@ -13,46 +13,13 @@
   background-color: rgb(54, 47, 47);
   width: 100%;
   height: 10vh; /* view-height */
-  /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
-    rgba(240, 46, 170, 0.05) 25px 25px; */
 }
 
 .icon {
   padding-right: 20%;
   width: 100%;
-  height: 100%;
+  height: auto;
   color: brown;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 5em;
-  height: 4rem;
-  color: white;
-  font-family: 'Montserrat';
-  font-size: 1.5rem;
-  text-align:center;
-  --borderWidth: 3px;
-  background: black;
-  position: relative;
-  border-radius: var(--borderWidth);
-}
-
-.button:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 3s ease infinite;
-  background-size: 300% 300%;
 }
 
 @keyframes animatedgradient {

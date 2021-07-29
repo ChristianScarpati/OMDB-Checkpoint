@@ -27,10 +27,12 @@ export default store;
 
 
 /*                                STORE
+
 Almacenar el estado global de la aplicación
 Dar acceso al estado mediante store.getState()
 Permitir que el estado se actualice mediante store.dispatch()
 Registrar listeners mediante store.subscribe(listener)
+
  */
 
 /*                                 REDUCERS

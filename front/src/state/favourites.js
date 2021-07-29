@@ -17,7 +17,7 @@ export const getFav = createAsyncThunk("GET_FAV", (movie) => {
 
     //ADD FAV
 
-export const addFav = createAsyncThunk("FAVORITE_ADD", (movie) => {
+export const addFav = createAsyncThunk("ADD_FAV", (movie) => {
 
     return axios({
         method: "POST",
@@ -30,7 +30,7 @@ export const addFav = createAsyncThunk("FAVORITE_ADD", (movie) => {
 
     //DELETE FAV
 
-export const delFav = createAsyncThunk("DELETE_ADD", (movie) => {
+export const delFav = createAsyncThunk("DEL_FAV", (movie) => {
 
     return axios({
         method: "DELETE",

@@ -28,7 +28,7 @@ User.init(
       allowNull: true,
     },
   },
-  { sequelize: db, modelName: "users" }
+  { sequelize: db, timestamps: false, modelName: "users" }
 );
 
 //miDdleware

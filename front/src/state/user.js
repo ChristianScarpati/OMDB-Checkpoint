@@ -10,33 +10,33 @@ export const postUser = createAsyncThunk('POST_USER', (user) => {   //mandamos u
     
     return axios.post('http://localhost:3001/api/users', user)
     .then((res) => res.data)
-    .catch((err) => console.log((err, "falló postUser")))
+    .catch((err) => (err))
 })
 
 //Loguear Usuario
-export const loginUser = createAsyncThunk('LOGIN_USER', (user) => {   //mandamos un user al backend que enviamos desde el FRONT
+export const loginUser = createAsyncThunk('LOGIN_USER', (user) => {   
 
     
     return axios.post('http://localhost:3001/api/users/login', user)
     .then((res) => res.data)
-    .catch((err) => console.log((err, "falló login")))
+    .catch((err) => ((err, "falló login")))
 })
 
 //Desloguear Usuario
-export const logOutUser = createAsyncThunk('LOGOUT_USER', () => {   //mandamos un user al backend que enviamos desde el FRONT
+export const logOutUser = createAsyncThunk('LOGOUT_USER', () => {   
 
     
     return axios.post('http://localhost:3001/api/users/logout')
     .then((res) => res.data)
-    .catch((err) => (err, "falló logut"))
+    .catch((err) => (err))
 })
 
 //me
-export const sessionUser = createAsyncThunk('SESSION_USER', () => {   //mandamos un user al backend que enviamos desde el FRONT
+export const sessionUser = createAsyncThunk('SESSION_USER', () => {   
 
     return axios.get('http://localhost:3001/api/users/me')
     .then((res) => res.data)
-    .catch((err) => (err, "falló"))
+    .catch((err) => (err))
 })
 
 
@@ -49,7 +49,7 @@ export const getUsers = createAsyncThunk('GET_USERS', () => {
         url: 'http://localhost:3001/api/users'      
     })
     .then((res) => res.data)
-    .catch((err) => (err, "falló"))
+    .catch((err) => (err))
 })
 
 export const getSingleUser = createAsyncThunk('GET_SINGLEUSER', () => {
@@ -60,7 +60,7 @@ export const getSingleUser = createAsyncThunk('GET_SINGLEUSER', () => {
         url: 'http://localhost:3001/api/user'      
     })
     .then((res) => res.data)
-    .catch((err) => (err, "falló"))
+    .catch((err) => (err))
 })
 
 

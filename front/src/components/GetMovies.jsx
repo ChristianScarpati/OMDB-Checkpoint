@@ -1,14 +1,14 @@
 import { getMoviesRequest } from "../state/movies";
 import { useDispatch, useSelector } from "react-redux";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { getMovie } from "../state/movie";
-import Loading from "./Loading";
 import style from "../styles/getmovies.module.css";
 import { Card, Button } from "react-bootstrap";
-// DISPATCH =  envia pedidos y envisos al axios/
+// DISPATCH =  envia pedidos y envios al axios/
 
 const GetMovies = () => {
+
   const movies = useSelector((state) => state.movies); //cargamos el estado con esto
   const dispatch = useDispatch(); //para traer o mandar datos con axios
   const successSearch = movies[1]?.Search ? movies[1].Search : null; //Si movies existe entonces accede a movies.search. SI existe, que traiga las peliculas, sino null
@@ -19,9 +19,10 @@ const GetMovies = () => {
   };
 
   return (
-    <div className="container" className={style.centerMovies}>
+    <div  className={style.centerMovies}>
       {successSearch
         ? successSearch.slice(1).map((p) => {
+
             return (
               <div className={style.peliculas} key={p.imdbID}>
                 <Link

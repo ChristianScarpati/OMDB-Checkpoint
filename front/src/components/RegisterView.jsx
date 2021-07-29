@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { postUser } from "../state/user";
 //vista haces click y nos lleva a un form
 import style from '../styles/form.module.css'
+import styleButton from '../styles/registerButton.module.css'
+
 
 const RegisterView = () => {
 
@@ -17,12 +19,14 @@ const RegisterView = () => {
     
 
 const handleClick = () => {
-    console.log("se hizo el onSUbmit", {
+
+    console.log("se hizo el onSUbmit",
+     {
         username: username,
         email: email,
         password: password
     })
-    dispatch(postUser({
+    dispatch(postUser({ 
         name: username,
         email: email,
         password: password
@@ -69,13 +73,17 @@ const handleClick = () => {
           placeholder="Password" />
          </Form.Group>
 
-        <Button 
-        variant="primary" 
-        className={style.button}
-         onClick={handleClick}  >  
-          Register
-          
-        </Button>
+
+        <div          
+>
+        <button 
+        className={styleButton.glow_on_hover}
+         onClick={handleClick}
+         
+           >  
+            Register
+        </button>
+        </div>
         </Form>
     </div>
 

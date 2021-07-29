@@ -18,7 +18,7 @@ Favourites.init({
             type: S.STRING
         }
 
-}, {sequelize: db, modelName: "favourites"})
+}, {sequelize: db, timestamps: false, modelName: "favourites"})
 
 module.exports = Favourites;
 

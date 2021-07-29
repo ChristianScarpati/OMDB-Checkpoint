@@ -21,7 +21,6 @@ router.post("/", (req, res, next) => {
         console.log("problemillas badre")
     }  
     res.send(req.user);
-
 });
 
 router.post("/logout", (req, res) => {

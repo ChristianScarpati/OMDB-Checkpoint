@@ -1,15 +1,26 @@
-.footer {
-  position: fixed;
-  left: 0;
+.mainFooter {
+  color: white;
+  background-color: black;
+  padding-top: 3em;
+  position: relative;
   bottom: 0;
   width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
+  
 }
 
-.body {
-  display: flex;
-  flex-direction: column;
+.liSize {
+
+  font-size: 17px;
+}
+
+.bold{
+  font-weight: 900;
+  color: aquamarine;
+  }
+
+.paddingLeft{
+  padding-left: initial;
+  font-weight: 900;
+  color: aquamarine
 }
 
